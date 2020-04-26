@@ -1,0 +1,11 @@
+sudo: false
+language: node_js
+node_js:
+  - '8'
+before_deploy: "npm run build"
+deploy:
+  provider: npm
+  email: "zhouzhi073859@outlook.com"
+  api_key: $NPM_API_KEY
+  on:
+    branch: master
